@@ -2,9 +2,13 @@ import praw
 import pandas as pd
 from datetime import datetime
 
+
 # Authenticate with the Reddit API
-reddit = praw.Reddit(client_id='your_client_id',
-                     client_secret='your_client_secret',
+client_id = os.environ['REDDIT_CLIENT_ID']
+client_secret = os.environ['REDDIT_CLIENT_SECRET']
+
+reddit = praw.Reddit(client_id=client_id,
+                     client_secret=client_secret,
                      user_agent='your_user_agent')
 
 # Define the subreddit to search for
