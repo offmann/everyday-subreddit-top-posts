@@ -6,12 +6,12 @@ This project was built using ChatGPT, a large language model trained by OpenAI, 
 ```
 I want to implement a project of a data pipeline in Python.   
 I want to scrape posts from a subreddit every day and export the results to a CSV file.   
-I want to use Airflow as a scheduler and Dockerize the whole thing. Can you help me get started?
+I want to use Airflow as a scheduler and Dockerize the whole thing. let's build it step by step
 ```
 
 
 ### Getting Started  
-To use this project, you will need to have Docker and Docker Compose installed on your machine.
+To use this project, you will need to have Docker installed on your machine.
 
 1. Clone this repository to your local machine: 
 
@@ -49,9 +49,7 @@ If you want to customize the pipeline to scrape a different subreddit or change 
 
 1. Modify the scrape_posts.py script to use the PRAW library to scrape posts from the desired subreddit. You can also modify the script to scrape comments instead of posts if desired.
 
-2. Modify the schedule_interval argument in the Airflow DAG to change the frequency of the pipeline. The default schedule interval is set to '30 2 * * *', which runs the pipeline every day at 2:30.
-
-3. Since we've changed the script name, make sure to rename the file scrape_tweets.py to scrape_posts.py.
+2. Modify the schedule_interval argument in the Airflow DAG to change the frequency of the pipeline. The default schedule interval is set to ``` '30 2 * * *' ```, which runs the pipeline every day at 2:30.
 
 4. Build the Docker image and run the Docker container using the same commands as before
 
