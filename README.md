@@ -83,7 +83,7 @@ If the ```scrape_posts.py``` script is scheduled to run daily, this is some KPIs
 
 The Python script ```reddit_daily_metrics.py```  will calculate these metrics based on the previously generated csv files and generate views in the form of csv files. These files can be later connected to a Dataviz tool
 
-Depending on how you want to refresh 
+Depending on how you want to refresh your dashboard, you can schedule ```reddit_daily_metrics.py``` to run accordingly.
 
 ### Conclusion
 This project demonstrates how to build a simple data pipeline in Python using Airflow as a scheduler. By customizing the scrape_posts.py script and the Airflow DAG, you can adapt this pipeline to scrape data from a variety of sources and schedule it to run at any interval you choose.
