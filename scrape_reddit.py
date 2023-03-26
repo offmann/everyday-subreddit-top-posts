@@ -1,5 +1,6 @@
 import praw
 import pandas as pd
+from datetime import datetime
 
 # Authenticate with the Reddit API
 reddit = praw.Reddit(client_id='your_client_id',
@@ -7,7 +8,7 @@ reddit = praw.Reddit(client_id='your_client_id',
                      user_agent='your_user_agent')
 
 # Define the subreddit to search for
-subreddit_name = 'cryptocurrency'
+subreddit_name = 'Python'
 subreddit = reddit.subreddit(subreddit_name)
 
 # Scrape the top 100 posts from the subreddit
@@ -20,5 +21,9 @@ for post in posts:
 
 df = pd.DataFrame(data, columns=['created_utc', 'author', 'title', 'selftext'])
 
-# Export the DataFrame to a CSV file
-df.to_csv('reddit_posts.csv', index=False)
+# Generate the filename with timestamp
+timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+filename = f'reddit_posts_{timestamp}.csv'
+
+# Export the DataFrame to a CSV file with the timestamp in the filename
+df.to_csv(filename, index=False)
