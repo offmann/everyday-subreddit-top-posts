@@ -4,7 +4,9 @@ This project was built using ChatGPT, a large language model trained by OpenAI, 
 
 Prompt  
 ```
-I want to implement a project of a data pipeline in Python. I want to scrape posts from a subreddit every day and export the results to a CSV file. I want to use Airflow as a scheduler and Dockerize the whole thing. Can you help me get started?
+I want to implement a project of a data pipeline in Python.   
+I want to scrape posts from a subreddit every day and export the results to a CSV file.   
+I want to use Airflow as a scheduler and Dockerize the whole thing. Can you help me get started?
 ```
 
 
