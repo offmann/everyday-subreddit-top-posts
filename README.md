@@ -30,16 +30,16 @@ cd data-pipeline-airflow
 ```shell
 docker build -t <image_name> .
 ```
-Replace <image_name> with a name of your choice.
+Replace image_name with a name of your choice.
 
 4. Set your Reddit authentication credentials as environment variables when running the Docker container. You can use the following command to run the Docker container with environment variables:
 ```shell
 docker run -e REDDIT_CLIENT_ID=<your client ID> -e REDDIT_CLIENT_SECRET=<your client secret> -e REDDIT_USERNAME=<your Reddit username> -e REDDIT_PASSWORD=<your Reddit password> -v /path/to/export/directory:/app/export <image_name>
 ```
 
-Replace your client ID, your client secret, your Reddit username, and your Reddit password with your actual Reddit authentication credentials. Replace /path/to/export/directory with the path to the directory on your local machine where you want to export the CSV files. Replace <image_name> with the name you chose in step 3.
+Replace your client ID, your client secret, your Reddit username, and your Reddit password with your actual Reddit authentication credentials. Replace /path/to/export/directory with the path to the directory on your local machine where you want to export the CSV files. Replace image_name with the name you chose in step 3.
 
-The script will be executed every day according to the Airflow scheduler. The CSV files will be exported to the /path/to/export/directory directory on your local machine.
+The script will be executed every day according to the Airflow scheduler. The CSV files will be exported to the ```/path/to/export/directory``` directory on your local machine.
   
  Make sure to include any additional setup or configuration steps that may be necessary, such as setting up the Airflow scheduler or installing any required Python packages
 
@@ -57,7 +57,7 @@ If you want to customize the pipeline to scrape a different subreddit or change 
 
 
 ### Exporting the Results
-The results of each pipeline execution are exported to a CSV file with a timestamp in the filename. The filename format is reddit_posts_YYYY-MM-DD_HH-MM-SS.csv, where YYYY-MM-DD is the date and HH-MM-SS is the time of the execution.
+The results of each pipeline execution are exported to a CSV file with a timestamp in the filename. The filename format is ```reddit_posts_YYYY-MM-DD_HH-MM-SS.csv``` where YYYY-MM-DD is the date and HH-MM-SS is the time of the execution.
 
 The CSV files are stored in the data directory inside the Docker container. To access the CSV files on your local machine, you can use the following command:
 
