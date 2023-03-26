@@ -1,14 +1,14 @@
 # Data Pipeline with Airflow and Python
 
-This project was built using ChatGPT, a large language model trained by OpenAI, based on the GPT-3.5 architecture. The prompts and responses used to create this project were generated entirely by ChatGPT.
+This project was built using ChatGPT, a large language model trained by OpenAI, based on the GPT-3.5 model.   
+This repo was created and refined after several prompts which can be resumed in the following :
 
-### Prompt  
+### Prompts  
 ```
 I want to implement a project of a data pipeline in Python.   
 I want to scrape posts from a subreddit every day and export the results to a CSV file.   
 I want to use Airflow as a scheduler and Dockerize the whole thing. let's build it step by step
 ```
-
 
 ### Getting Started  
 To use this project, you will need to have Docker installed on your machine.
