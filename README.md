@@ -66,5 +66,20 @@ docker cp <container_id>:/app/data /path/on/local/machine
 Replace <container_id> with the ID of the Docker container and /path/on/local/machine with the path to the directory where you want to copy the CSV files.
 
 
+### Build Visualisation againt reddit data
+
+If the scrape_posts.py script is scheduled to run daily, this is some KPIs to reflect daily metrics :
+
+* Total number of posts per day
+* Top 10 subreddits by number of posts
+* Average number of upvotes per post per day
+* Average number of comments per post per day
+* Most upvoted post of the day
+* Most commented post of the day
+* Average score (upvotes minus downvotes) per post per day
+* Top 10 users who have posted the most in the last day
+* Distribution of posts by time of day (e.g. morning, afternoon, evening, night)
+* Most common words or phrases in post titles for the day.
+
 ### Conclusion
 This project demonstrates how to build a simple data pipeline in Python using Airflow as a scheduler. By customizing the scrape_posts.py script and the Airflow DAG, you can adapt this pipeline to scrape data from a variety of sources and schedule it to run at any interval you choose.
