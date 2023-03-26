@@ -8,7 +8,7 @@ reddit = praw.Reddit(client_id='your_client_id',
                      user_agent='your_user_agent')
 
 # Define the subreddit to search for
-subreddit_name = 'Python'
+subreddit_name = 'Cryptocurrency'
 subreddit = reddit.subreddit(subreddit_name)
 
 # Scrape the top 100 posts from the subreddit
