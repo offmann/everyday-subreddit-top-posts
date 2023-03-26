@@ -34,7 +34,7 @@ If you want to customize the pipeline to scrape a different subreddit or change 
 
 1. Modify the scrape_posts.py script to use the PRAW library to scrape posts from the desired subreddit. You can also modify the script to scrape comments instead of posts if desired.
 
-2. Modify the schedule_interval argument in the Airflow DAG to change the frequency of the pipeline. The default schedule interval is set to '0 */4 * * *', which runs the pipeline every 4 hours.
+2. Modify the schedule_interval argument in the Airflow DAG to change the frequency of the pipeline. The default schedule interval is set to '30 2 * * *', which runs the pipeline every day at 2:30.
 
 3. Since we've changed the script name, make sure to rename the file scrape_tweets.py to scrape_posts.py.
 
