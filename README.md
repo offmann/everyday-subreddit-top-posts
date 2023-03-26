@@ -37,7 +37,7 @@ Replace <image_name> with a name of your choice.
 docker run -e REDDIT_CLIENT_ID=<your client ID> -e REDDIT_CLIENT_SECRET=<your client secret> -e REDDIT_USERNAME=<your Reddit username> -e REDDIT_PASSWORD=<your Reddit password> -v /path/to/export/directory:/app/export <image_name>
 ```
 
-Replace <your client ID>, <your client secret>, <your Reddit username>, and <your Reddit password> with your actual Reddit authentication credentials. Replace /path/to/export/directory with the path to the directory on your local machine where you want to export the CSV files. Replace <image_name> with the name you chose in step 3.
+Replace your client ID, your client secret, your Reddit username, and your Reddit password with your actual Reddit authentication credentials. Replace /path/to/export/directory with the path to the directory on your local machine where you want to export the CSV files. Replace <image_name> with the name you chose in step 3.
 
 The script will be executed every day according to the Airflow scheduler. The CSV files will be exported to the /path/to/export/directory directory on your local machine.
   
