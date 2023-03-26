@@ -25,15 +25,16 @@ git clone https://github.com/your-username/data-pipeline-airflow.git
 cd data-pipeline-airflow
 ```
 
-3. Build the Docker image:
+3. Build the Docker image using the Dockerfile. You can use the following command to build the Docker image in the directory containing the Dockerfile:
 
 ```shell
-docker-compose build
+docker build -t <image_name> .
 ```
+Replace <image_name> with a name of your choice.
 
-4. Run the Docker container:
+4. Set your Reddit authentication credentials as environment variables when running the Docker container. You can use the following command to run the Docker container with environment variables:
 ```shell
-docker-compose up
+docker run -e REDDIT_CLIENT_ID=<your client ID> -e REDDIT_CLIENT_SECRET=<your client secret> -e REDDIT_USERNAME=<your Reddit username> -e REDDIT_PASSWORD=<your Reddit password> -v /path/to/export/directory:/app/export <image_name>
 ```
 
 
