@@ -68,7 +68,7 @@ Replace <container_id> with the ID of the Docker container and /path/on/local/ma
 
 ### Build Visualisation againt reddit data
 
-If the scrape_posts.py script is scheduled to run daily, this is some KPIs to reflect daily metrics :
+If the ```scrape_posts.py``` script is scheduled to run daily, this is some KPIs to reflect daily metrics :
 
 * Total number of posts per day
 * Top 10 subreddits by number of posts
