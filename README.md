@@ -16,7 +16,7 @@ To use this project, you will need to have Docker installed on your machine.
 1. Clone this repository to your local machine: 
 
 ```shell
-git clone https://github.com/offmann/data-pipeline-airflow.git
+git clone git@github.com:offmann/everyday-subreddit-top-posts.git
 ```
 
 2. Change into the project directory:
