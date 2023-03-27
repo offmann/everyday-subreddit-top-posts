@@ -20,10 +20,13 @@ posts = subreddit.top(limit=50)
 
 # Convert the post data into a Pandas DataFrame
 data = []
+# Convert the post data into a Pandas DataFrame
+data = []
 for post in posts:
-    data.append([post.created_utc, post.author.name, post.title, post.selftext])
+    data.append([post.created_utc, post.author, post.title, post.selftext, post.score, post.num_comments])
 
-df = pd.DataFrame(data, columns=['created_utc', 'author', 'title', 'selftext'])
+columns = ['created_utc','author','title','selftext','score','num_comments']    
+df = pd.DataFrame(data, columns=columns).sort_values(by='score', ascending=False)
 
 # Generate the filename with timestamp
 timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
