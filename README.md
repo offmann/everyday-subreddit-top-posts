@@ -22,7 +22,7 @@ git clone git@github.com:offmann/everyday-subreddit-top-posts.git
 2. Change into the project directory:
 
 ```shell
-cd data-pipeline-airflow
+cd everyday-subreddit-top-posts
 ```
 
 3. Build the Docker image using the Dockerfile. You can use the following command to build the Docker image in the directory containing the Dockerfile:
