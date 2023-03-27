@@ -20,8 +20,6 @@ posts = subreddit.top(limit=50)
 
 # Convert the post data into a Pandas DataFrame
 data = []
-# Convert the post data into a Pandas DataFrame
-data = []
 for post in posts:
     data.append([post.created_utc, post.author, post.title, post.selftext, post.score, post.num_comments])
 
